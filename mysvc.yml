@@ -11,7 +11,8 @@ metadata:
       nodePort: 30001
       protocol: TCP
     selector:
-        app: mynginx  
+        app: mynginx
+          
 
 
 
