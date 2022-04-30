@@ -1,0 +1,17 @@
+apiVersion: v1
+Kind: Service 
+metadata:
+  name: mynginx-svs
+  labels:
+     app: mynginx
+  spec:
+    type: Nodeport
+    ports: 
+    - Ports: 8080
+      nodePort: 30001
+      protocol: TCP
+    selector:
+        app: mynginx  
+
+
+
