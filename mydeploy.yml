@@ -1,21 +1,21 @@
 apiVersion: apps/v1
-Kind: Depolyment
+kind: Deployment
 metadata:
-   name: myjavaapp-deploy
-   labels:
+  name: myjavaapp-deploy
+  labels:
      app: myjavaapp
-   spec:
-    repilcas: 3
-    selectors:
-      matchLables:
-            app: myjavaapp
-    template:
-      metadate:
-        labels:
-          app: myjavaapp
-      spec: 
-        containers:
-        - name: myjavaapp-container
-          image: maha4iac/myjavaapp26march22:1
-          ports:
-          - containersport: 8080    
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+         app: myjavaapp
+  template:
+     metadata:
+       labels:
+         app: myjavaapp
+     spec:
+       containers:
+       - name: myjavaapp-container
+         image: maha4iac/mymahalogin02april22:2
+         ports:
+         - containerPort: 80
